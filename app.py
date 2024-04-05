@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Flask inside Docker!! Automated From Jenkins Version-2"
+    return "Flask On K8s!! Automated From Jenkins"
 
 
 if __name__ == "__main__":
