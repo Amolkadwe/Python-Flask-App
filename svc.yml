@@ -7,6 +7,6 @@ spec:
     app: flask-app
   ports:
     - protocol: TCP
-      port: 80 # The port you want to expose externally
-      targetPort: 5000 # The port your Flask app is listening on inside the container
-  type: LoadBalancer # Change this to the appropriate service type based on your setup
+      port: 80 
+      targetPort: 5000 
+  type: NodePort
