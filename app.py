@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Flask On K8s!! Automated From Jenkins"
+    return "Flask On K8s!! Automated From Jenkins Version-1"
 
 
 if __name__ == "__main__":
