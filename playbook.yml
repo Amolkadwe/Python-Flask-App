@@ -4,10 +4,11 @@
   become: true
 
   tasks:
-    - name: Copy Dockerfile
-      copy:
+    - name: Sync Dockerfile
+      synchronize:
         src: /home/ubuntu/workspace/Ansible-Jenkins-Pipeline/
         dest: /home/ubuntu/project/
+        recursive: yes
         mode: 0644
 
     - name: build container image
