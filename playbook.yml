@@ -9,6 +9,7 @@
         mode: pull
         src: /home/ubuntu/workspace/Ansible-Jenkins-Pipeline/
         dest: /home/ubuntu/project/
+        checksum: true
         mode: 0644
     
 
