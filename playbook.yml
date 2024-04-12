@@ -1,0 +1,28 @@
+---
+- name: docker-playbook
+  hosts: docker-servers
+  become: true
+
+  tasks:
+    - name: Copy Dockerfile
+      copy:
+        src: /home/ubuntu/workspace/Ansible-Jenkins-Pipeline/
+        dest: /home/ubuntu/project/
+        mode: 0644
+
+    - name: build container image
+      docker_image:
+        name: democontainer:v1.0
+        source: build
+        build:
+          path: /home/ubuntu/project/
+        state: present
+        force_source: true
+
+    - name: Deploy Docker Container
+      docker_container:
+        name: ansible-flask-app
+        image: democontainer:v1.0
+        state: started
+        ports:
+          - "5000:5000"
