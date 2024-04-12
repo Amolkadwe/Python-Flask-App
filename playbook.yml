@@ -23,6 +23,6 @@
       docker_container:
         name: ansible-flask-app
         image: democontainer:v1.0
-        state: stopped
+        state: started
         ports:
           - "5000:5000"
