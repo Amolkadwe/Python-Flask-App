@@ -5,7 +5,7 @@
 
   tasks:
     - name: Sync Dockerfile
-      synchronize:
+      ansible.posix.synchronize:
         src: /home/ubuntu/workspace/Ansible-Jenkins-Pipeline/
         dest: /home/ubuntu/project/
         mode: 0644
