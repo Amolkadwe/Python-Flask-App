@@ -10,7 +10,7 @@
         src: /home/ubuntu/workspace/Ansible-Jenkins-Pipeline/
         dest: /home/ubuntu/project/
         mode: 0644
-      delegate_to: delegate.host
+    
 
     - name: build container image
       docker_image:
