@@ -1,13 +1,13 @@
 ---
 - name: docker-playbook
-  hosts: docker-servers
+  hosts: Docker-Servers
   become: true
 
   tasks:
     - name: Deploy Docker Container
       docker_container:
-        name: amolkadwe/ansible-flask-app:latest
-        image: democontainer:v1.0
+        name: ansible-flask-app
+        image: amolkadwe/ansible-flask-app:latest
         state: started
         ports:
           - "5000:5000"
