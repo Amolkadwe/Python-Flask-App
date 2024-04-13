@@ -4,6 +4,12 @@
   become: true
 
   tasks:
+    - name: Stop the running container
+      docker_container:
+        name: ansible-flask-app
+        state: stopped
+      ignore_errors: yes
+      
     - name: Deploy Docker Container
       docker_container:
         name: ansible-flask-app
