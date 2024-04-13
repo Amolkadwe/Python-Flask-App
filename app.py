@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Flask App Deployed Throgh Ansible v1 "
+    return "Flask App Deployed Throgh Ansible v2 "
 
 
 if __name__ == "__main__":
