@@ -10,6 +10,11 @@
         state: stopped
       ignore_errors: yes
       
+    - name: Pull the latest Docker image
+      docker_image:
+        name: amolkadwe/ansible-flask-app:latest
+        source: pull
+      
     - name: Deploy Docker Container
       docker_container:
         name: ansible-flask-app
